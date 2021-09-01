@@ -1,4 +1,4 @@
 import os
 
 
-print(os.env.get("SEGREDO"))
+print(os.environ.get("SEGREDO"))
