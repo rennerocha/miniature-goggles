@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SEGREDO: ${{ secrets.SEGREDO }}
-      TESTE_DEFAULT: ${{ default.TESTE_DEFAULT }}
+      TESTE_DEFAULT: ${{ secrets.TESTE_DEFAULT }}
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
@@ -27,4 +27,4 @@ jobs:
         pip install python-decouple
         python schedule.py
         echo ${{ secrets.SEGREDO }}
-        echo ${{ default.TESTE_DEFAULT }}
+        echo ${{ secrets.TESTE_DEFAULT }}
